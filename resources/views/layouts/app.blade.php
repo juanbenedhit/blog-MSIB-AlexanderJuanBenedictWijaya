@@ -32,6 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href=" {{ route('posts.index') }}">Post</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('profile.show') }}">Profile</a>
+                        </li>
                     </ul>
                 </div>
             </div>
