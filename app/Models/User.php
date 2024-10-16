@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    
+    public function getProfilePhotoUrlAttribute()
+{
+    $hash = md5(strtolower(trim($this->email)));
+    return "https://www.gravatar.com/avatar/$hash?s=200&d=mp";
+}
 }

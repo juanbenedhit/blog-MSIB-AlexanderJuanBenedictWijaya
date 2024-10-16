@@ -3,8 +3,8 @@
 @section('title', 'Posts')
 
 @section('content')
-    <h1>Posts</h1>
-    <a href="{{ route('posts.create') }}" class="btn btn-primary mb-2">Create Post</a>
+<div class="container">
+<a href="{{ route('posts.create') }}" class="btn btn-primary mb-2">Create Post</a>
     <div class="list-group">
         
         @if (count($posts) >= 0)
@@ -48,4 +48,7 @@
             </div>
         @endif
     </div>
+
+</div>
+
 @endsection
