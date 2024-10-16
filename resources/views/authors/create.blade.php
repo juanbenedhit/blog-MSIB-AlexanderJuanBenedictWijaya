@@ -4,7 +4,6 @@
 
 @section('content')
     <h1>Create Author</h1>
-    <a href="{{ route('authors.index') }}" class="btn btn-secondary mb-3">Back to Authors</a>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -18,18 +17,17 @@
 
     <form action="{{ route('authors.store') }}" method="POST">
         @csrf
+
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control" required>
+            <input type="text" name="name" id="name" class="form-control" value="{{ old('name') }}">
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" required>
-        </div>
+
         <div class="form-group">
             <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" class="form-control" rows="3"></textarea>
+            <textarea name="bio" id="bio" class="form-control">{{ old('bio') }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Create Author</button>
+
+        <button type="submit" class="btn btn-primary mt-2">Create</button>
     </form>
 @endsection

@@ -21,13 +21,12 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:authors',
-            'bio' => 'nullable|string',
+            'name' => 'required',
+            'bio' => 'nullable',
         ]);
 
         Author::create($request->all());
-        return redirect()->route('authors.index')->with('success', 'Author created successfully');
+        return redirect()->route('authors.index')->with('success', 'Author created successfully.');
     }
 
     public function show(Author $author)
@@ -43,18 +42,17 @@ class AuthorController extends Controller
     public function update(Request $request, Author $author)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:authors,email,'.$author->id,
-            'bio' => 'nullable|string',
+            'name' => 'required',
+            'bio' => 'nullable',
         ]);
 
         $author->update($request->all());
-        return redirect()->route('authors.index')->with('success', 'Author updated successfully');
+        return redirect()->route('authors.index')->with('success', 'Author updated successfully.');
     }
 
     public function destroy(Author $author)
     {
         $author->delete();
-        return redirect()->route('authors.index')->with('success', 'Author deleted successfully');
+        return redirect()->route('authors.index')->with('success', 'Author deleted successfully.');
     }
 }

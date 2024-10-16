@@ -19,6 +19,12 @@ class PostController extends Controller
         $categories = Category::all();
         return view('posts.create', compact('categories'));
     }
+    
+    public function show($id){
+        $category = Category::find($id);
+        return view('categories.show', compact('category'));
+    }
+
 
     public function store(Request $request)
     {
@@ -49,10 +55,14 @@ class PostController extends Controller
         }
     }
 
-    public function edit(Post $category)
-    {
-        return view('posts.edit', compact('category'));
-    }
+public function edit($id)
+{
+    $posts = Post::findOrFail($id); 
+    $categories = Category::all(); 
+
+    return view('posts.edit', compact('posts', 'categories')); 
+}
+
 
     public function update(Request $request, Post $category)
     {
