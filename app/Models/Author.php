@@ -7,9 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+
     use HasFactory;
-    protected $fillable = ['name', 'bio'];
+
+    protected $fillable= [
+        'name',
+        'email',
+        'phone',
+        'address',
+        'image',
+    ];
+
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
 }
-
-
-
