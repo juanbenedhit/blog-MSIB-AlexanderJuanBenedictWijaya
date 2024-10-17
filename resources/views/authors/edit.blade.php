@@ -3,7 +3,7 @@
 @section('title', 'Edit Author')
 
 @section('content')
-<h1>Edit Author</h1>
+<!-- <h1>Edit Author</h1>
     <a href="{{ route('authors.index') }}" class="btn btn-primary mb-3">Back</a>
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -41,6 +41,6 @@
             <input type="file" name="image" id="image" class="form-control">
         </div>
         <button type="submit" class="btn btn-warning mt-2">Update</button>
-    </form>
+    </form> -->
 
 @endsection

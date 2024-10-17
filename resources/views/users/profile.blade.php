@@ -3,14 +3,14 @@
 @section('title', 'Post Details')
 
 @section('content')
-    <h1>User Profile</h1>
-    <a href="{{ route('categories.index') }}" class="btn btn-primary">Back</a>
+    <h1 class="text-white fw-bold">User Profile</h1>
+    <a href="{{ route('categories.index') }}" class="btn btn-primary px-4">Back</a>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
+                <div class="card bg-primary opacity-75 text-white shadow">
                     <div class="card-header">
-                        <h3 class="text-center">User Profile</h3>
+                        <h3 class="text-center fw-bold">User Profile</h3>
                     </div>
                     <div class="card-body">
                         <p><strong>ID :</strong> {{ $user->id }}</p>
