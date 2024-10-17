@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <img class="img-dashboard" src="images/blurry_background.svg" alt="">
+
 <body>
     <div class="container w-50 d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row border rounded-5 p-3 bg-white shadow box-area">
-            <!-- <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box bg-primary">
-                <div class="featured-image mb-3">
-                    <img src="rb_1262.png" class="img-fluid" alt="img" style="width: 300px;">
-                </div>
-                <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Blog MSIB</p>
-
-                <small class="text-white text-wrap text-center" style="font-family: 'Courier New', Courier, monospace;">Let's Get in</small>
-
-            </div> -->
-
-            <div class="box">
+        <div class="row border rounded-5 p-3 bg-primary box-area text-white shadow ">
+            <div class="box opacity-75">
               <div class="row align-items-center mx-3">
                 <div class="header-text mb-4 text-center">
                     <h2 class="fw-bold">Hello, again</h2>
@@ -49,26 +40,28 @@
                 <form action="{{ route('login') }}" method="post">
                     @csrf
                     <div class="form-group mb-3">
-                        <label for="email" class="form-label">Email</label><br>
+                        <label for="email" class="form-label fw-bold">Email</label><br>
                         <input type="email" name="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email Address" value="{{ old('email') }}">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="password" class="form-label">Password</label><br>
+                        <label for="password" class="form-label fw-bold">Password</label><br>
                         <input type="password" name="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
                     </div>
     
                     <div class="form-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+                        <button class="btn btn-light mt-2 text-primary fw-bold w-100 fs-6">Login</button>
                     </div>
 
-                    <div class="form-group mb-3">
-                        <a href="{{ route('dashboard') }}" class="btn btn-secondary">Back</a>
-                    </div>
+                    <div class="form-group mb-3 d-flex justify-content-start">
+                        <button class="btn btn-outline-primary">
+                            <a class="text-decoration-none text-white fw-bolder" href="{{ route('dashboard') }}">Back</a>
+                        </button>
+                    </div> 
 
                 </form>
                 
                 <div class="row mx-1 text-center">
-                    <small class="text-secondary">Don't have account? <a href="{{ route('register') }}" class="text-decoration-none">Sign Up</a></small>
+                    <small class="text-white">Don't have account? <a href="{{ route('register') }}" class="text-decoration-none text-white fw-bold">Sign Up</a></small>
                 </div>
                 
             </div>

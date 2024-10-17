@@ -3,10 +3,17 @@
     @section('title', 'Author Details')
 
     @section('content')
-        <h1>Author Details</h1>
-        <a href="{{ route('authors.index') }}" class="btn btn-primary mb-3">Back</a>
-        <div class="d-flex justify-content-center mb-2">
-            <div class="card w-50 ">
+        <h1 class="text-white d-flex justify-content-center fw-bold mb-4">Author Details</h1>
+        
+        <div class="d-flex justify-content-start">
+        <button class="btn btn-outline-primary">
+            <a class="text-decoration-none text-white fw-bolder" href="{{ route('authors.index') }}">Back</a>
+        </button>
+    </div>       
+    
+    <div class="d-flex justify-content-center mb-2">
+        <div class="card mt-5 bg-primary opacity-75 shadow text-white w-50">
+            <div class="card-body ">
                 <div class="card-header">
                     <h4>Biodata</h4>
                 </div>
@@ -27,4 +34,6 @@
                 </div>
             </div>
         </div>
+    </div>
+
     @endsection

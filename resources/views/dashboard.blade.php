@@ -19,14 +19,14 @@
             </div>
             <div class="begin mt-5 d-flex justify-content-center gap-5">
                 @auth
-                    <a href="{{ route('categories.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-semibold mt-5">Categories</a>
-                    <a href="{{ route('posts.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-semibold mt-5">Posts</a>
-                    <a href="{{ route('authors.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-semibold mt-5">Authors</a>
+                    <a href="{{ route('categories.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-bold mt-5">Categories</a>
+                    <a href="{{ route('posts.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-bold mt-5">Posts</a>
+                    <a href="{{ route('authors.index') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-bold mt-5">Authors</a>
                     
                 @else
-                    <a href="{{ route('login') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-semibold mt-5">Log in</a>
+                    <a href="{{ route('login') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded  px-4 fw-bold mt-5">Log in</a>
                     @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded px-4 fw-semibold mt-5">Register</a>
+                    <a href="{{ route('register') }}" class="btn btn btn-outline-primary text-white text-decoration-none rounded px-4 fw-bold mt-5">Register</a>
                     @endif
                 @endauth
             </div>
